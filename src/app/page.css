@@ -1,0 +1,11 @@
+.categories li {
+  @apply rounded-sm border border-hidden bg-white p-1 text-black text-lg;
+}
+
+.teams h3 {
+  @apply mt-3;
+}
+
+.teams div {
+  @apply block rounded-xl border-2 border-gray-600 p-5;
+}
