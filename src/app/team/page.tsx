@@ -5,15 +5,6 @@ import { contentfull } from "@/types/contentfull";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 
-interface TeamMember {
-  name: string;
-  slug: string;
-  title: string;
-  expertise: string;
-  contact: string;
-  description: string;
-  teamPhoto: string;
-}
 
 export default async function Team() {
   const posts = (await getContentfulData({

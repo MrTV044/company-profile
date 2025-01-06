@@ -22,7 +22,7 @@ export default function About() {
         <br />
         <br />
         <br />
-        <h2 className="text-2xl mb-2">Company's Culture</h2>
+        <h2 className="text-2xl mb-2">Company&apos;s Culture</h2>
         Our Culture: We take pride in blending professionalism with a personal
         touch. Rooted in the timeless values of French hospitality, our culture
         emphasizes attention to detail, respect for tradition, and a deep love

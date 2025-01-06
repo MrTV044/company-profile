@@ -1,8 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
+
 import "./page.css";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS } from "@contentful/rich-text-types";
 
 async function getSinglePost() {
   try {
@@ -24,7 +22,6 @@ export default async function HomePage({
 }) {
   const slug = (await params).slug;
   const post = await getSinglePost();
-  const data = post.items[0].fields;
   console.log(slug);
   console.log(post);
   return (
