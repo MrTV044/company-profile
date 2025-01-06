@@ -1,11 +1,58 @@
 import Image from "next/image";
 import "./teams.css";
+import { getContentfulData } from "@/utils/get-contetful-data";
+import { contentfull } from "@/types/contentfull";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
 
-export default function Team() {
-  return (
-    <>
-      <h2 className="w-fit m-auto text-4xl mt-5 ">Teams</h2>
-      <div className="teams grid grid-cols-1 gap-4 bg-black p-10 pt-5 sm:grid-cols-3 sm:gap-10">
+interface TeamMember {
+  name: string;
+  slug: string;
+  title: string;
+  expertise: string;
+  contact: string;
+  description: string;
+  teamPhoto: string;
+}
+
+export default async function Team() {
+  const posts = (await getContentfulData({
+    content_type: "teamMember",
+  })) as unknown as contentfull[];
+
+  console.log(posts);
+
+  if (posts) {
+    return (
+      <>
+        <h2 className="w-fit m-auto text-4xl mt-5 ">Teams</h2>
+        <section>
+          {posts.map((post, index) => (
+            <div key={index} className="teams grid grid-cols-3 gap-3 ">
+              <div className="">
+                <div className="relative h-[300px] w-full rounded-xl">
+                  <Image
+                    src={`https:${post.fields.picture.fields.file.url}`}
+                    alt="picture of people"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <h1>{post.fields.names}</h1>
+                <p>{post.fields.title}</p>
+                {documentToReactComponents(post.fields.description, {
+                  renderNode: {
+                    [BLOCKS.PARAGRAPH]: (node, children) => {
+                      return <p>{children}</p>;
+                    },
+                  },
+                })}
+              </div>
+            </div>
+          ))}
+        </section>
+
+        {/* <div className="teams grid grid-cols-1 gap-4 bg-black p-10 pt-5 sm:grid-cols-3 sm:gap-10">
         <div>
           <Image
             src="/headshot-guy-3.jpg"
@@ -60,7 +107,10 @@ export default function Team() {
             perfection ensures every dessert is a masterpiece.
           </p>
         </div>
-      </div>
-    </>
-  );
+      </div> */}
+      </>
+    );
+  } else {
+    return <h1>Not Found</h1>;
+  }
 }

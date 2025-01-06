@@ -1,109 +1,98 @@
 import Image from "next/image";
 import "./about.css";
 
-export default function Blogs() {
+export default function About() {
   return (
-    <div className="ml-5 mr-5">
-      {/* vision and mission */}
-      <div className="mb-8 flex gap-5">
-        <div>
-          <h1 className="m-auto mb-2 w-fit text-xl">Vision</h1>
-          <p>
-            We aim to be the leading platform for automotive knowledge, where
-            enthusiasts, collectors, and professionals can access valuable
-            information, spark discussions, and stay updated on everything from
-            iconic brands to cutting-edge technologies. Our vision is to create
-            a community united by a shared passion for exceptional automobiles.
-            We seek to inspire, educate, and celebrate the evolving automotive
-            landscape, fostering a love for cars that spans generations.
-          </p>
-        </div>
-        <div>
-          <h2 className="m-auto mb-2 w-fit text-xl">Mission</h2>
-          <p>
-            Our mission is to provide comprehensive, insightful content for
-            automotive enthusiasts, focusing on luxury brands, performance
-            vehicles, and classic cars. We strive to be the go-to destination
-            for expert reviews, restoration tips, and the latest automotive
-            trends. With engaging articles and expert commentary, we connect car
-            lovers worldwide and share the excitement of automotive innovation
-            and culture.
-          </p>
+    <>
+      <div className="about">
+        <h1 className="text-2xl mb-2">Company History</h1>
+        At Frenchie, we bring the elegance, flavor, and artistry of authentic
+        French cuisine to your events. Established in 2015, our mission has
+        always been to create memorable dining experiences that celebrate the
+        rich culinary traditions of France while adapting to the unique needs of
+        our clients. Our Story: Founded by a passionate Paris-trained chef,
+        Frenchie began as a boutique catering service specializing in private
+        dinners and intimate gatherings. Over the years, we’ve grown into a
+        trusted name in the catering industry, recognized for our commitment to
+        quality, creativity, and impeccable service. Our Team: At Frenchie,
+        every dish reflects the skill and passion of our dedicated team of
+        chefs, bakers, and event professionals. From selecting the finest
+        ingredients to crafting exquisite presentations, our team ensures every
+        bite is a celebration of French gastronomy.
+        <br />
+        <br />
+        <br />
+        <h2 className="text-2xl mb-2">Company's Culture</h2>
+        Our Culture: We take pride in blending professionalism with a personal
+        touch. Rooted in the timeless values of French hospitality, our culture
+        emphasizes attention to detail, respect for tradition, and a deep love
+        for food. Whether it’s a casual brunch or an extravagant wedding
+        banquet, we approach every event with the same level of care and
+        artistry. With Frenchie, you’re not just getting a meal—you’re indulging
+        in a culinary journey that transports you and your guests straight to
+        the heart of France.
+      </div>
+
+      <div>
+        <h2 className="w-fit m-auto text-4xl mt-5 ">Teams</h2>
+        <div className="teams grid grid-cols-1 gap-4 bg-black p-10 pt-5 sm:grid-cols-3 sm:gap-10">
+          <div>
+            <Image
+              src="/headshot-guy-3.jpg"
+              alt="picture guy"
+              width={500}
+              height={500}
+            />
+            <h3>Chef Pierre Duval</h3>
+            <p>Executive Chef & Founder</p>
+            <p>
+              Pierre is the creative force behind Frenchie. A graduate of Le
+              Cordon Bleu in Paris, he has over 15 years of experience in French
+              fine dining and catering. Known for his innovation and meticulous
+              attention to detail, Pierre blends traditional French flavors with
+              modern culinary techniques to create unforgettable menus. His
+              philosophy: &quot;Cooking is not just about food; it’s about
+              crafting moments that linger in memories.&quot;
+            </p>
+          </div>
+          <div>
+            <Image
+              src="/headshot-girl-3.jpg"
+              alt="picture girl"
+              width={500}
+              height={500}
+            />
+            <h3>Marie Moreau</h3>
+            <p>Event Manager</p>
+            <p>
+              Marie is the backbone of every event at Frenchie. With a
+              background in luxury event planning and a flair for organization,
+              she ensures every detail is executed flawlessly, from décor to
+              guest experience. Her charm and calm demeanor make clients feel at
+              ease while she works her magic behind the scenes to turn visions
+              into reality.
+            </p>
+          </div>
+          <div>
+            <Image
+              src="/headshot-guy-1.jpg"
+              alt="picture guy"
+              width={500}
+              height={500}
+            />
+            <h3>Julien Laurent</h3>
+            <p>Pastry Chef</p>
+            <p>
+              Julien specializes in crafting exquisite French pastries and
+              desserts that are as visually stunning as they are delicious. From
+              flaky croissants to decadent macarons, Julien’s creations
+              consistently wow clients. He learned his craft from a
+              Michelin-starred pastry chef in Lyon, and his dedication to
+              perfection ensures every dessert is a masterpiece.
+            </p>
+          </div>
         </div>
       </div>
-      {/* Author's bio */}
-      <h1 className="m-auto mb-2 w-fit text-2xl">Author's Biography</h1>
-      <div className="author grid grid-cols-1 gap-4 bg-black p-10 pt-5 sm:grid-cols-3 sm:gap-10">
-        <div>
-          <Image></Image>
-          <h1>Alex Parker</h1>
-          <p>
-            A seasoned automotive journalist with over 15 years of experience
-            covering Italian sports cars. Specializing in Ferrari, Alex has
-            closely followed the marque’s evolution from its classic 1960s
-            designs to modern-day models. His deep passion for Ferrari’s
-            engineering excellence and racing pedigree has made him a respected
-            voice in automotive publications worldwide.
-          </p>
-        </div>
-        <div>
-          <h1>Emma Davis</h1>
-          <p>
-            a longstanding admiration for Ferrari and its rich legacy in the
-            automotive world. Having worked in both the luxury car and auction
-            industries, Emma's writings often delve into Ferrari’s unique
-            designs, its impact on motorsports, and the growing collector market
-            for classic Ferraris. She is widely known for her engaging narrative
-            style and meticulously researched articles.
-          </p>
-        </div>
-        <div>
-          <h1>Liam Carter</h1>
-          <p>
-            Liam's passion for Lamborghini lies not only in its superb
-            performance but also in its bold and futuristic designs. Over the
-            years, he has written extensively on Lamborghini's innovations in
-            technology and aesthetics, with a specific interest in the brand's
-            pivotal models like the Diablo, Gallardo, and Huracán. Liam provides
-            insightful commentary on Lamborghini's impact on luxury and supercar
-            culture.
-          </p>
-        </div>
-        <div>
-          <h1>Sophia Morgan</h1>
-          <p>
-            Sophia has spent over a decade immersing herself in the world of
-            Lamborghini. With a background in automotive design, Isabella brings
-            a unique perspective to her writings on Lamborghini's design,
-            technology, and performance. As a regular contributor to several
-            luxury car magazines, her analysis of the Lamborghini brand spans
-            from the early Miura to the latest Aventador models.
-          </p>
-        </div>
-        <div>
-          <h1>Michael Davis</h1>
-          <p>
-            Michael Davis is a dedicated automotive historian with a special
-            focus on British classics, particularly the iconic Classic Mini.
-            With a background in engineering, Michael brings a technical lens to
-            his work, diving deep into the history, restoration, and unique
-            qualities that made the Classic Mini a beloved automobile across the
-            globe.
-          </p>
-        </div>
-        <div>
-          <h1>Sarah Williams</h1>
-          <p>
-            Sarah is an automotive restoration expert and writer with a
-            particular fondness for the Classic Mini. With a keen eye for detail
-            and an immense knowledge of its engineering, she specializes in
-            restoring and refurbishing Minis. Sarah’s expert advice has helped
-            countless Classic Mini enthusiasts maintain and bring back their
-            vehicles to their original glory, and her work serves as an
-            educational guide for anyone seeking to understand this iconic car.
-          </p>
-        </div>
-      </div>
-    </div>
+    </>
   );
 }

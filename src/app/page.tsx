@@ -56,8 +56,8 @@ export default async function HomePage({
         </div>
 
         {/* company overview */}
-        <h2 className="text-2xl mt-5">Company Overview</h2>
-        <div>
+        <h2 className="w-fit m-auto text-4xl mt-5 mb-2">Company Overview</h2>
+        <div className="ml-10 mr-10">
           <p>
             Founded by a passionate Paris-trained chef, Frenchie began as a
             boutique catering service specializing in private dinners and
@@ -80,7 +80,7 @@ export default async function HomePage({
 
         {/* teams */}
         <h2 className="w-fit m-auto text-4xl mt-5 ">Teams</h2>
-        <div className="teams grid grid-cols-1 gap-4 bg-black p-10 pt-5 sm:grid-cols-3 sm:gap-10">
+        <div className="teams grid grid-cols-1 gap-4 p-10 pt-5 sm:grid-cols-3 sm:gap-10">
           <div>
             <Image
               src="/headshot-guy-3.jpg"
@@ -139,8 +139,8 @@ export default async function HomePage({
         </div>
 
         {/* testimonials */}
-        <h2 className="w-fit m-auto text-4xl mt-5 ">Teams</h2>
-        <div className="teams grid grid-cols-1 gap-4 bg-black p-10 pt-5 sm:grid-cols-4 ">
+        <h2 className="w-fit m-auto text-4xl mt-5 ">Testimonials</h2>
+        <div className="teams grid grid-cols-1 gap-4 p-10 pt-5 sm:grid-cols-4 ">
           <div>
             Frenchie made our wedding an absolute dream. The food was
             extraordinary, and our guests couldn’t stop raving about the
