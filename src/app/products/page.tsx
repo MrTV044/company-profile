@@ -1,12 +1,12 @@
 // import { contentfull } from "@/types/contentfull";
-import { contentfull } from "@/types/contentful";
+import { ContentfulPost } from "@/types/contentful";
 import Image from "next/image";
 import { getContentfulData } from "@/utils/get-contetful-data";
 
 export default async function PostsPage() {
   const posts = (await getContentfulData({
     content_type: "companyProfile",
-  })) as unknown as contentfull[];
+  })) as unknown as ContentfulPost[];
 
   console.log(posts);
 

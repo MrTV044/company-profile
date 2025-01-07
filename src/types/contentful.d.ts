@@ -10,6 +10,8 @@ export interface ContentfulPost {
     picture: { fields: { file: { url: string } } };
     names: string;
     description: Document;
+    image: { fields: { file: { url: string } } };
+    products: string;
     featuredImage: {
       sys: {
         id: string;
