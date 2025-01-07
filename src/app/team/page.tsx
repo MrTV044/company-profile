@@ -16,9 +16,9 @@ export default async function Team() {
     return (
       <>
         <h2 className="w-fit m-auto text-4xl mt-5 ">Teams</h2>
-        <section>
+        <section className="grid grid-cols-3 gap-3 ">
           {posts.map((post, index) => (
-            <div key={index} className="teams grid grid-cols-3 gap-3 ">
+            <div key={index} className="teams ">
               <div className="">
                 <div className="relative h-[300px] w-full rounded-xl">
                   <Image
