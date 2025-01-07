@@ -1,5 +1,5 @@
 // import { contentfull } from "@/types/contentfull";
-import { contentfull } from "@/types/contentfull";
+import { contentfull } from "@/types/contentful";
 import Image from "next/image";
 import { getContentfulData } from "@/utils/get-contetful-data";
 

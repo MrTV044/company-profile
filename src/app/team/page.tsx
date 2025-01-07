@@ -1,15 +1,14 @@
 import Image from "next/image";
 import "./teams.css";
 import { getContentfulData } from "@/utils/get-contetful-data";
-import { contentfull } from "@/types/contentfull";
+import { ContentfulPost } from "@/types/contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
-
 
 export default async function Team() {
   const posts = (await getContentfulData({
     content_type: "teamMember",
-  })) as unknown as contentfull[];
+  })) as unknown as ContentfulPost[]; // [{}, {}, {}]
 
   console.log(posts);
 
